@@ -59,6 +59,14 @@ public class RedisSentinelTransporter extends Transporter {
 					
 					@Override
 					public void message(byte[] pattern, byte[] channel, byte[] message) {
+						String pat = new String(pattern, StandardCharsets.UTF_8);
+						String chan = new String(channel, StandardCharsets.UTF_8);
+//						try {
+//							System.out.println("rec "  + pat + " " + chan + " " + serializer.read(message));
+//						}
+//						catch (Exception e) {}
+						
+						received(chan, message);						
 					}
 					
 					@Override
