@@ -202,7 +202,7 @@ targetCompatibility = 1.8
 
 group = 'drivenow'
 
-version = '1.0.5-RC2'
+version = '1.0.5-RC3'
 
 modifyPom {
     project {
